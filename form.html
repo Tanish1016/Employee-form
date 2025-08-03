@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Manager</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>New Employees</h1>
+    <form class="form" aria-label="Add new employee" id="employeeForm" novalidate>
+      <div class="field">
+        <label for="name">Enter Name</label>
+        <input type="text" id="name" placeholder="e.g., Jack" aria-required="true" />
+      </div>
+      <div class="field">
+        <label for="profession">Enter Profession</label>
+        <input type="text" id="profession" placeholder="e.g., Developer" aria-required="true" />
+      </div>
+      <div class="field">
+        <label for="age">Enter Age</label>
+        <input type="number" id="age" placeholder="e.g., 20" aria-required="true" min="0" />
+      </div>
+      <div class="action">
+        <button id="addBtn" class="btn" type="submit">Add User</button>
+      </div>
+    </form>
+
+    <div id="msgContainer" aria-live="polite"></div>
+
+    <div class="list">
+      <div class="count" id="employeeCount">Added Employees (0)</div>
+      <div id="employeesWrapper">
+        <div class="no-entries" id="noEntries">No employees added yet.</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
